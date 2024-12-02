@@ -35,26 +35,6 @@ describe("map", () => {
           "Mapping an empty array should return an empty array"
         );
       });
-
-      it("should return an empty array when mapping a null array", () => {
-        const array = null;
-        const iteratee = (n) => n * n;
-        const result = map(array, iteratee);
-        expect(result).to.deep.equal(
-          [],
-          "Mapping a null array should return an empty array"
-        );
-      });
-
-      it("should return an empty array when mapping an undefined array", () => {
-        const array = undefined;
-        const iteratee = (n) => n * n;
-        const result = map(array, iteratee);
-        expect(result).to.deep.equal(
-          [],
-          "Mapping an undefined array should return an empty array"
-        );
-      });
     });
 
     describe("map with objects and mixed types", () => {
@@ -105,6 +85,26 @@ describe("map", () => {
   });
 
   describe("negative tests", () => {
+    it("should return an empty array when mapping a null array", () => {
+      const array = null;
+      const iteratee = (n) => n * n;
+      const result = map(array, iteratee);
+      expect(result).to.deep.equal(
+        [],
+        "Mapping a null array should return an empty array"
+      );
+    });
+
+    it("should return an empty array when mapping an undefined array", () => {
+      const array = undefined;
+      const iteratee = (n) => n * n;
+      const result = map(array, iteratee);
+      expect(result).to.deep.equal(
+        [],
+        "Mapping an undefined array should return an empty array"
+      );
+    });
+
     it("should return an empty array when mapping a non-array value", () => {
       const notArray = 123;
       const iteratee = (n) => n * n;
@@ -137,7 +137,7 @@ describe("map", () => {
 
     it("should return an empty array when mapping a function", () => {
       const notArray = () => {};
-  		const iteratee = (n) => n * n;
+      const iteratee = (n) => n * n;
       const result = map(notArray, iteratee);
       expect(result).to.deep.equal(
         [],
