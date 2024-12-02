@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --require @babel/register",
     "coverage": "nyc --reporter=lcov --reporter=text mocha"
   },
   "author": "",
