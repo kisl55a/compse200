@@ -1,0 +1,7 @@
+{
+  "all": true,
+  "include": ["src/map.js"],
+  "exclude": ["test/**/*.js"],
+  "reporter": ["lcov", "text"],
+  "require": ["@babel/register"]
+}
