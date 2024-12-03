@@ -1,6 +1,6 @@
 {
   "all": true,
-  "include": ["src/map.js", "src/add.js", "src/clamp.js"],
+  "include": ["src/map.js", "src/add.js", "src/clamp.js", "src/get.js", "src/isDate.js"],
   "exclude": ["test/**/*.js"],
   "reporter": ["lcov", "text"],
   "require": ["@babel/register"]
