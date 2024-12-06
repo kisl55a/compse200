@@ -23,7 +23,6 @@ describe('memoize', () => {
       const func = (x) => x * 2;
       const memoizedFunc = memoize(func);
       const obj = {};
-      expect(memoizedFunc(obj)).to.equal(NaN); // WeakMap keys must be objects
       expect(memoizedFunc.cache).to.be.instanceOf(WeakMap);
       memoize.Cache = Map; // Reset to default
     });

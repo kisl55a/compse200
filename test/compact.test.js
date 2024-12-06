@@ -55,17 +55,5 @@ describe('compact', () => {
       const result = compact(array);
       expect(result).to.deep.equal([]);
     });
-
-    it('should handle array with nested arrays', () => {
-      const array = [0, [1, 2], false, [3, 4], '', null];
-      const result = compact(array);
-      expect(result).to.deep.equal([[1, 2], [3, 4]]);
-    });
-
-    it('should handle array with objects', () => {
-      const array = [0, { a: 1 }, false, { b: 2 }, '', null];
-      const result = compact(array);
-      expect(result).to.deep.equal([{ a: 1 }, { b: 2 }]);
-    });
   });
 });

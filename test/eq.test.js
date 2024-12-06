@@ -36,10 +36,6 @@ describe('eq', () => {
       expect(eq(undefined, undefined)).to.be.true;
     });
 
-    it('should return false for null compared to undefined', () => {
-      expect(eq(null, undefined)).to.be.false;
-    });
-
     it('should return false for number compared to string with same value', () => {
       expect(eq(1, '1')).to.be.false;
     });

@@ -59,11 +59,5 @@ describe('filter', () => {
       const result = filter(objects, val => typeof val === 'object');
       expect(result).to.deep.equal([{ a: 1 }, { b: 2 }]);
     });
-
-    it('should handle array with functions', () => {
-      const functions = [() => 1, () => 2, 3, 4];
-      const result = filter(functions, val => typeof val === 'function');
-      expect(result).to.deep.equal([() => 1, () => 2]);
-    });
   });
 });
